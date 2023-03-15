@@ -16,6 +16,7 @@ services:
   keycloak:
       image: quay.io/keycloak/keycloak:legacy
       environment:
+        BASE_URL: http://localhost:3000
         DB_VENDOR: POSTGRES
         DB_ADDR: postgres
         DB_DATABASE: keycloak
@@ -26,7 +27,10 @@ services:
         KEYCLOAK_PASSWORD: Pa55w0rd
         # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
         #JDBC_PARAMS: "ssl=true"
+      volumes:
+        - ./themes/embrapa:/opt/jboss/keycloak/themes/embrapa        
       ports:
         - 8080:8080
       depends_on:
         - postgres
+

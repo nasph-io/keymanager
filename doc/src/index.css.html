@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>index.css</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../doc-style.css" />
+  <script src="../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../";
+    var thisFile = "src/index.css";
+    var defaultSidebar = true;
+  </script>
+  <script src="../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+      <div class="heading h1">
+        <a href="#separate">Separate</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>index.css</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="css"><span class="hljs-keyword">@tailwind</span> base;
+<span class="hljs-keyword">@tailwind</span> components;
+<span class="hljs-keyword">@tailwind</span> utilities;
+
+<span class="hljs-keyword">@layer</span> components {
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap" id="separate">
+  <h1>
+    <a href="#separate" name="separate" class="pilcrow"></a>
+Separate
+  </h1>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="css">
+  .separate {
+    @apply flex items-center text-center;
+  }
+
+  .separate::after,
+  .separate::before {
+    content: '';
+    @apply border-b border-gray-300 flex-1;
+  }
+
+  .separate:not(:empty)::after {
+    @apply ml-2;
+  }
+
+  .separate:not(:empty)::before {
+    @apply mr-2;
+  }
+}
+
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>
